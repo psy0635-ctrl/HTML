@@ -1,10 +1,10 @@
-    <style>
-        h1{
-            color: white;
-            background:magenta;
-        }
-    </style>
-    h2{
-        color:white;
-        background:rgb(rgb(160, 59, 59));
+   h1 {
+        color: white;
+        background: magenta; /* 밝은 자홍색 */
+    }
+
+    h2 {
+        color: white;
+        /* 중복된 rgb를 제거하고 스타일 태그 안으로 옮겼습니다 */
+        background: rgb(160, 59, 59); /* 차분한 벽돌색 */
     }
