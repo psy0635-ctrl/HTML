@@ -6,12 +6,40 @@
     <title>Document</title>
 </head>
 <body>
-    <audio src="media/Kalimba.mp3" controls></audio><br>
+    <!-- src = 음악 파일 위치 / controls = 재생 버튼 표시 == 웹페이지에서 음악 재생 가능 -->
+    <audio src="media/Kalimba.mp3" controls></audio><br> 
+    <!-- width = 비디오 너비 / height = 비디오 높이 / poster = 재생 전 표시할 이미지 -->
     <video src="media/Wildlife.mp4" controls width="400" height="300" poster="https://placehold.co/400X300"></video><br><br>
     <!--상대 경로(현재 문서를 기준으로 출력할 파일의 경로를 지정)로 이미지 파일 설정-->
-    <img src="media/image.png" alt=" 바다 이미지">
-    <img src="image.png" alt=" 바다 이미지">
-    <img src="https://www.telltrip.com/wp-content/uploads/2024/12/Jeju-Island-winter-sea1.jpg" alt=" 바다 이미지">
-    <img src="https://www.telltrip.com/wp-content/uploads/2024/12/Jeju-Island-winter-sea1.jpg" alt=" 바다 이미지" width="400" height="300">
+    <img src="media/image.png" alt=" 바다 이미지"> <!-- src = 이미지 위치 / alt → 이미지 안 보일 때 대신 설명 -->
+    <img src="image.png" alt=" 바다 이미지">  <!--상대경로-->
+    <img src="https://www.telltrip.com/wp-content/uploads/2024/12/Jeju-Island-winter-sea1.jpg" alt=" 바다 이미지"> <!--절대경로--> <!--인터넷에서 바로 가져옴-->
+    <img src="https://www.telltrip.com/wp-content/uploads/2024/12/Jeju-Island-winter-sea1.jpg" alt=" 바다 이미지" width="400" height="300"> <!--이미지 크기 강제 조절-->
+
+    <!--| 구분 | 상대 경로         | 절대 경로     |
+        | --   | -------------    | --------- |
+        | 기준 | 현재 파일         | 전체 주소     |
+        | 사용 | 내 프로젝트       | 인터넷       |
+        | 예시 | media/img.png   | https://~ | -->
+
 </body>
 </html>
+
+<전체 흐름>
+[오디오]
+▶ 음악 재생
+
+[비디오]
+▶ 영상 재생 (썸네일 있음)
+
+[이미지 1]
+→ media 폴더에서 불러옴
+
+[이미지 2]
+→ 같은 폴더에서 불러옴
+
+[이미지 3]
+→ 인터넷 이미지
+
+[이미지 4]
+→ 인터넷 이미지 + 크기 조절
