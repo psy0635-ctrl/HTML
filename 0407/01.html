@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>                                          <!--method="post" = 데이터를 숨겨서 전송-->
+    <form action = "01.html" method = "post">   <!--action="01.html" = 제출하면 이동할 페이지-->
+        <fieldset>     <!--fieldset = 입력 영역을 박스로 묶음-->
+            <legend>회원가입</legend>   <!--legend = fieldset 제목-->
+            <table width = "300"> <!---입력칸을 깔끔하게 정렬-->
+                <tr>
+                    <td><label for="name">성명 :</label></td> <!--label = 입력 양식 설명-->
+                    <td><input type = "text" name = "name" id = "name"></td>
+                    <!--
+                    type="text" = 일반 입력칸   
+                    name="name" = 서버로 보내는 이름 (중요)
+                    id="name" = label이랑 연결 
+                    -> for="name" ↔ id="name" 연결됨-->
+                </tr>
+                <tr>
+                    <td><label for="email">이메일 :</label></td> <!--이메일 입력-->
+                    <td><input type = "email" name = "email" id = "email"></td>
+                </tr>
+                <tr>
+                    <td><label for="addr">주소 :</label></td> <!--주소 입력-->
+                    <td><input type = "text" name = "addr" id = "addr"></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">성별 :</label></td> <!--성별 입력-->
+                    <td>
+                        <input type = "radio" name = "gender" value = "남" id = "male">
+                        <label for="male">남성</label> &nbsp;&nbsp; <!--name이 같으면 하나만 선택 가능(중요)-->
+                        <input type = "radio" name = "gender" value = "여" id = "female">
+                        <label for="female">여성</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>남기고 싶은 말 : </td>  <!--여러 개 선택 가능-->
+                    <td>
+                        <textarea name = "message" cols="30" rows="5">기타 하고 싶은 말이 있으면 여기에 입력하세요</textarea>
+                    </td>                       
+                </tr>
+                <tr>    <!--제출 버튼과 초기화 버튼-->
+                    <td><input type = "submit" value = "가입하기">&nbsp;&nbsp; <!--submit = 서버로 전송-->
+                        <input type = "reset" value = "입력초기화">         <!--reset = 입력한 내용 초기화-->     
+                </td>
+                </tr>
+            </table>                
+        </fieldset>
+    </form>
+
+</body>
+</html>
+
+text → 글 입력
+email → 이메일 검사
+radio → 하나 선택 (name 같아야 함)
+checkbox → 여러 개 선택
+submit → 전송
+reset → 초기화
