@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 부모(body) 기준 두 번째 자식이 p이면 적용 */
+        p:nth-child(2){
+            font-size: 20px;
+        }
+
+        /* 세 번째 자식 */
+        p:nth-child(3){
+            font-size: 30px;
+        }
+
+        /* 네 번째 자식 */
+        p:nth-child(4){
+            font-size: 40px;
+        }
+
+        /* 다섯 번째 자식 */
+        p:nth-child(5){
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1번째 자식 -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+
+    <!-- 2번째 자식 → 20px 적용 -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+
+    <!-- 3번째 자식 → 30px 적용 -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+
+    <!-- 4번째 자식 → 40px 적용 -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+
+    <!-- 5번째 자식 → 50px 적용 -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+</body>
+</html>
