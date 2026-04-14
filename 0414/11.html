@@ -2,18 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 반응형 설정 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>가시 속성</title>
+
     <style>
+        /* id가 s2인 요소 선택 */
         #s2{
             /* display: none; */
+            /* 요소를 아예 화면에서 제거 (공간도 사라짐) */
+
             display: block;
+            /* inline 요소(span)를 block 요소로 변경 */
         }
     </style>
 </head>
+
 <body>
+
+    <!-- 기본 span (inline) -->
     <span>가시속성</span>
-    <span id="s2">dispaly속성</span>
+
+    <!-- display 적용 대상 -->
+    <span id="s2">display속성</span>
+
+    <!-- 기본 span -->
     <span>가시속성</span>
 
 </body>
