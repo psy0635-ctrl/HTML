@@ -5,38 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
+        /* ─── 글자 크기 클래스 ─── */
         .font_big
         {
-            font-size: 2en;
+            font-size: 2em;   /* 글자 크기를 기본의 2배로 설정 (원본은 2en → 오타, em이 맞음) */
         }
+
+        /* ─── 글자 스타일 클래스 ─── */
         .font_style1
         {
-            font-style: italic;
-            font-weight: bold;
-            text-align: center;
+            font-style: italic;      /* 글자를 기울임체(이탤릭)로 */
+            font-weight: bold;       /* 글자를 굵게 */
+            text-align: center;      /* 글자를 가운데 정렬 */
         }
+
+        /* ─── 버튼 박스 디자인 ─── */
         .button
         {
-            width: 150px;
-            height: 70px;
-            background-color: #ff6a00;
-            border-width: 10px;
-            border-style: solid;
-            border-color: #ffffffff;
-            border-radius: 30px;
-            box-shadow: 5px 5px 5px #a9a9a9;
+            width: 150px;                     /* 버튼 가로 크기 */
+            height: 70px;                     /* 버튼 세로 크기 */
+            background-color: #ff6a00;        /* 버튼 배경색: 주황색 */
+            border-width: 10px;               /* 테두리 두께: 10px */
+            border-style: solid;              /* 테두리 모양: 실선 */
+            border-color: #ffffffff;          /* 테두리 색상: 흰색 (끝 ff는 투명도 = 불투명) */
+            border-radius: 30px;              /* 모서리를 둥글게 (값이 클수록 더 둥글어짐) */
+            box-shadow: 5px 5px 5px #a9a9a9;  /* 그림자: 오른쪽5px 아래5px 번짐5px 회색 */
         }
+
+        /* ─── 버튼 안의 링크(<a>) 스타일 ─── */
+        /* '>' 는 직계 자식만 선택한다는 의미 (.button 바로 안의 <a>만 적용) */
         .button > a
         {
-            display: block;
-            line-height: 70px;
-            text-decoration: none;
+            display: block;       /* <a>를 블록 요소로 → 버튼 전체 영역이 클릭 가능해짐 */
+            line-height: 70px;    /* 줄 높이를 버튼 height와 동일하게 → 글자가 수직 가운데 정렬됨 */
+            text-decoration: none; /* 링크 기본 밑줄 제거 */
         }
+
     </style>
 </head>
 <body>
+
+    <!-- 버튼 역할을 하는 div 박스 -->
     <div class="button"> 
+
+        <!-- 
+            클릭 시 네이버로 이동하는 링크
+            - font_big    : 글자 크기 2배
+            - font_style1 : 굵은 이탤릭 + 가운데 정렬
+            - href        : 클릭 시 이동할 주소
+        -->
         <a class="font_big font_style1" href="https://www.naver.com/">Naver</a>
+
     </div>
+
 </body>
 </html>
