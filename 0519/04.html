@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let r = 7;
+        // 반지름(radius)을 7로 설정
+        // let = 나중에 값을 바꿀 수 있는 변수 선언 키워드
+        const PI = Math.PI;
+        // Math.PI = 자바스크립트가 내장하고 있는 원주율 값
+        // const = 한 번 정하면 바꿀 수 없는 상수(constant) 선언 키워드
+
+
+        //원의 둘레 구하기
+        let circum = 2 * PI * r; 
+        alert("반지름이 " + r + " cm인 원의 둘레(cm): " + circum + "㎝");
+        // alert() = 브라우저 팝업창으로 메시지를 띄우는 함수
+
+
+        //원의 넓이 구하기
+        let area = PI * Math.pow(r, 2);
+        // Math.pow(r, 2) = r의 2제곱 → 7² = 49
+        //   └ Math.pow(밑, 지수) 형태로 사용
+        alert("반지름이 " + r + " cm인 원의 넓이(cm²): " + area + "㎠");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
