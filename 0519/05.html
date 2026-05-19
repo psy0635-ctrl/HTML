@@ -24,9 +24,10 @@
 
         if (hours > 12){
             ampm = "오후";
+            hours -= 12;
+            // 13시 → 1시, 16시 → 4시, 23시 → 11시
         } else {
             ampm = "오전";
-            hours -= 12;
         }
         
         alert("오늘은 " + year + "년 " + month + "월 " + day + "일 " + ampm + " " + hours + "시 " + minutes + "분 " + seconds + "초입니다.");
