@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반환값이 있는 선언적 함수</title>
+    <script>
+        function tenTimes(callback){
+            for(let i=0; i<10; i++){
+                callback(i);
+            }
+        }
+        
+        // let fun = function(){
+        //     alert("콜백함수입니다.");
+        // }
+
+        tenTimes(function(i){
+            alert("익명함수입니다. - " + i);
+        });
+    </script>
+</head>
+<body>
+    <button onclick="alert(power(7,3))">세제곱승 계산결과</button>
+</body>
+</html>

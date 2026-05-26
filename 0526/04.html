@@ -4,17 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>반환값이 있는 선언적 함수</title>
+
     <script>
+        // ✅ 함수 선언 - power(x, y) = x의 y제곱을 계산
+        // 예: power(7, 3) = 7 × 7 × 7 = 343
         function power(x, y) {
+
             let result = 1;
+            // 결과값을 저장할 변수
+            // 0이 아닌 1로 시작해야 함 → 0으로 시작하면 뭘 곱해도 0
+
             for (let i = 0; i < y; i++) {
+                // i = 0, 1, 2 ... (y-1) 까지 총 y번 반복
+                // 예: y=3이면 → i=0, i=1, i=2 → 3번 반복
+
                 result *= x;
+                // result = result × x
+                // i=0: result = 1 × 7 = 7
+                // i=1: result = 7 × 7 = 49
+                // i=2: result = 49 × 7 = 343
             }
+
             return result;
+            // 최종 계산된 값을 함수 밖으로 내보냄
+            // return이 없으면 결과를 꺼낼 수 없음
         }
     </script>
 </head>
 <body>
+    <!--
+        버튼 클릭 시 동작 순서:
+        1. onclick 이벤트 발생
+        2. power(7, 3) 함수 실행 → 343 반환
+        3. alert(343) → 팝업창에 343 표시
+    -->
     <button onclick="alert(power(7,3))">세제곱승 계산결과</button>
 </body>
 </html>
