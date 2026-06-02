@@ -4,16 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>문자열 관련 속성들</title>
+
     <script>
+        /*
+         * [이 파일의 목표]
+         * setAttribute / getAttribute 사용법을 익힙니다.
+         *
+         * [핵심 개념] setAttribute와 getAttribute
+         *
+         * setAttribute("속성이름", "값")
+         *   → 요소에 속성을 새로 추가하거나, 기존 속성 값을 변경합니다.
+         *   → 예: element.setAttribute("title", "안녕") 은
+         *         <div title="안녕"> 처럼 만들어줍니다.
+         *
+         * getAttribute("속성이름")
+         *   → 요소에서 해당 속성의 값을 읽어옵니다.
+         *   → 예: element.getAttribute("title") 은 "안녕"을 반환합니다.
+         *
+         * [참고] title 속성이란?
+         *   HTML 요소에 title 속성을 달면, 마우스를 그 위에 올렸을 때
+         *   작은 말풍선(툴팁)으로 텍스트가 나타납니다.
+         */
+
+        // window.onload: 페이지가 완전히 로드된 후 실행합니다.
         window.onload = function(){
-            document.body.setAttribute("title", "속성 설정하기"); 
-            // body 요소에 title 속성을 추가하여 마우스를 올렸을 때 툴팁이 나타나도록 합니다.
+
+            // document.body.setAttribute("title", "속성 설정하기")
+            // → <body> 태그에 title 속성을 추가합니다.
+            // → 결과: <body title="속성 설정하기">
+            // → 마우스를 body 위에 올리면 "속성 설정하기" 툴팁이 뜹니다.
+            document.body.setAttribute("title", "속성 설정하기");
+
+            // document.body.getAttribute("title")
+            // → <body> 태그에서 title 속성의 값을 읽어옵니다.
+            // → 위에서 방금 "속성 설정하기"로 설정했으므로 그 값이 반환됩니다.
             let titleValue = document.body.getAttribute("title");
+
+            // alert(): 브라우저 알림창(팝업)을 띄웁니다.
+            // "+" 로 문자열과 변수를 이어 붙입니다.
+            // 결과 알림창: "body 요소의 title 속성 값: 속성 설정하기"
             alert("body 요소의 title 속성 값: " + titleValue);
         }
     </script>
 </head>
 <body>
-
+    <!-- body는 비어 있지만, JavaScript가 실행되면서 title 속성이 추가됩니다. -->
+    <!-- 알림창이 뜬 후 페이지 위에 마우스를 올려보면 툴팁이 나타납니다. -->
 </body>
 </html>

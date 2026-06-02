@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1초 간격으로 익명함수 호출하여 문자열 시계 만들기</title>
+    <script>
+        /*
+         * [이 파일의 목표]
+         * setInterval을 사용해서 1초마다 현재 시간을 화면에 출력하는 시계를 만듭니다.
+         *
+         * [핵심 개념] setInterval
+         *   setInterval(함수, 밀리초) → 지정한 간격마다 함수를 반복 실행합니다.
+         *   1초 = 1000밀리초
+         *
+         * [핵심 개념] Date 객체
+         *   new Date() → 현재 날짜와 시간 정보를 담은 객체를 만듭니다.
+         *   .getHours()   → 현재 '시'를 숫자로 반환 (예: 9)
+         *   .getMinutes() → 현재 '분'을 숫자로 반환 (예: 5)
+         *   .getSeconds() → 현재 '초'를 숫자로 반환 (예: 7)
+         *
+         */
+
+        // window.onload: 페이지가 완전히 로드된 후 실행합니다.
+        window.onload = function(){
+
+            // id가 "clock"인 <h1> 요소를 찾아서 clock 변수에 저장합니다.
+            let clock = document.getElementById("clock");
+
+            // setInterval(익명함수, 1000)
+            // → 아래 { } 안의 익명함수를 1초(1000ms)마다 계속 반복 실행합니다.
+            setInterval(function(){
+
+                // new Date(): 이 코드가 실행되는 순간의 날짜/시간 정보를 가져옵니다.
+                let now = new Date();
+                let year = now.getFullYear();   // 현재 연도 (예: 2024)
+                let month = now.getMonth() + 1; // 현재 월 (0~11이므로 +1 해서 1~12로 만듭니다)
+                let date = now.getDate();     // 현재 일 (1~31)
+                let hours = now.getHours();   // 현재 시 (0~23)
+                let minutes = now.getMinutes(); // 현재 분 (0~59)
+                let seconds = now.getSeconds(); // 현재 초 (0~59)
+                clock.innerHTML = year + "년 " + month + "월 " + date + "일 " + hours + "시 " + minutes + "분 " + seconds + "초";
+
+
+        },1000); // 1000밀리초 = 1초
+    }
+    </script>
+</head>
+<body>
+    <!-- h1 태그: 큰 제목을 표시하는 태그입니다. -->
+    <!-- id="clock": JavaScript에서 이 요소를 찾기 위한 고유 식별자입니다. -->
+    <!-- 처음에는 비어 있다가, setInterval이 1초마다 현재 시간을 채워넣습니다. -->
+    <h1 id = "clock"></h1>
+</body>
+</html>
