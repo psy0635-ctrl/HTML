@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        function callAlert() {
-            let msg = document.getElementById("input1").value; // input 요소의 현재 텍스트 값을 읽어옵니다.
-            alert(msg);
-        }
-    </script>
+  <!-- head : 화면에 안 보이는 설정 정보들을 담는 영역 -->
+  <meta charset="UTF-8">
+  <!-- charset="UTF-8" : 한글, 영어 등 다양한 글자를 깨지지 않게 처리 -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 모바일에서도 화면이 잘 보이도록 화면 크기를 기기에 맞게 자동 조정 -->
+  
+  <title>Document</title>
+  <!-- 브라우저 탭에 표시되는 페이지 제목 -->
+
+  <script>
+    // script 태그 안에는 JavaScript(동작을 만드는 코드)를 작성
+    
+    function callAlert() {
+      // function : 특정 동작을 묶어놓은 덩어리 — "callAlert"라는 이름으로 나중에 호출 가능
+      
+      let msg = document.getElementById("input1").value;
+      // document.getElementById("input1") : HTML에서 id가 "input1"인 요소를 찾아옴
+      // .value : 그 input 칸에 사용자가 입력한 텍스트를 꺼냄
+      // let msg = ... : 꺼낸 텍스트를 msg라는 변수(임시 저장공간)에 담음
+      
+      alert(msg);
+      // alert() : 괄호 안의 내용을 팝업창으로 화면에 띄움
+      // msg 변수에 담긴 텍스트가 팝업에 출력됨
+    }
+  </script>
 </head>
+
 <body>
-    <!-- <button onclick="alert('버튼이 클릭되었습니다!')">Click me</button> -->
-    <input type="text" id="input1" placeholder="Enter text">
-    <button onclick="callAlert()">Click me</button>
+  <!-- body : 실제로 화면에 보이는 내용을 담는 영역 -->
+
+  <input type="text" id="input1" placeholder="Enter text">
+  <!-- input : 사용자가 텍스트를 입력할 수 있는 칸 -->
+  <!-- type="text" : 일반 텍스트 입력 형태 -->
+  <!-- id="input1" : JavaScript에서 이 요소를 찾을 때 쓰는 고유 이름표 -->
+  <!-- placeholder="Enter text" : 아무것도 입력 안 했을 때 흐리게 보이는 안내 텍스트 -->
+
+  <button onclick="callAlert()">Click me</button>
+  <!-- button : 클릭할 수 있는 버튼 -->
+  <!-- onclick="callAlert()" : 버튼을 클릭하면 위에서 만든 callAlert 함수를 실행 -->
+  <!-- Click me : 버튼 위에 표시되는 텍스트 -->
+
 </body>
 </html>
