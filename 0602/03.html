@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소객체 속성 조작</title>
+    <script>
+        // 현재 바다 이미지가 보이고 있는지 기억하는 '스위치' 역할을 합니다.
+        // 처음에는 바다 이미지가 안 떠 있으니 일단 false(거짓)로 시작해요.
+        let isSeaImage = false; 
+
+        function changeImage() {
+            let img1 = document.getElementById("img1");
+
+            // 만약(if) 지금 바다 이미지가 안 켜져 있다면 (false라면)
+            if (isSeaImage == false) {
+                // 1. 바다 이미지를 보여줍니다.
+                img1.src = "imgs/sea.avif"; 
+                // 2. 이제 바다 이미지가 켜졌다고 스위치를 true(참)로 바꿉니다.
+                isSeaImage = true; 
+                
+            } 
+            // 그게 아니라면 (else) = 즉, 현재 바다 이미지가 켜져 있는 상태라면
+            else {
+                // 1. 다른 이미지(예: 산)로 바꿉니다.
+                img1.src = "imgs/Coin image.jpg"; 
+                // 2. 바다 이미지가 아니니까 다시 스위치를 false(거짓)로 바꿉니다.
+                isSeaImage = false; 
+            }
+
+            // 이미지 크기는 어떤 사진이든 300x200으로 고정합니다.
+            img1.width = 300;
+            img1.height = 200;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="changeImage()">이미지 번갈아 보기</button>
+    <br><br>
+    
+    <img id="img1">
+</body>
+</html>

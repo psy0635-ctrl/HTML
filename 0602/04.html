@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 관련 속성들</title>
+    <script>
+        window.onload = function(){
+            document.body.setAttribute("title", "속성 설정하기"); 
+            // body 요소에 title 속성을 추가하여 마우스를 올렸을 때 툴팁이 나타나도록 합니다.
+            let titleValue = document.body.getAttribute("title");
+            alert("body 요소의 title 속성 값: " + titleValue);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
