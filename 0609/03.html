@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인라인 이벤트 모델</title>
+    <script>
+        function greet() {
+            alert('안녕하세요~ 인라인 이벤트 모델 2');
+        }
+        function addStar(btn) {
+            btn.textContent += '*';
+        }
+        function overChange(btn){
+            btn.backgroundColor = 'yellow';
+        }
+        let count = 1;
+        function changeImg(img){
+            count++;
+            if(count == 6){
+                count = 1;
+            }
+            img.src = 'imgs/sea' + count + '.jpg';
+        }
+        function showImageSlide(){
+          let img = document.getElementById("img2");
+          setInterval(function(){
+            count++;
+            if(count == 6){
+                count = 1;
+            }
+            img.src = 'imgs/sea' + count + '.jpg';
+          }, 2000);
+        }
+    </script>
+</head>
+<body onload = "showImageSlide()">
+    <button onclick="alert('인라인 이벤트 모델 1')">인라인 이벤트 모델</button><br><br>
+    <button onclick="greet()">인라인 이벤트 모델 2</button><br><br>
+    <button onclick="addStar(this)">별 추가</button>
+    <button onmouseover="overChange(this)" onmouseout="outChange(this)">배경 및 글자색 변경</button><br><br>
+    <img src = "imgs/sea1.jpg" width="300" height="200" onclick="changeImg(this)" style="cursor: pointer;"><br><br>
+    <img src = "imgs/sea1.jpg" width="300" height="200" id = "img2"><br><br>
+</body>
+</html>
