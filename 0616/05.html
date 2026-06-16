@@ -24,6 +24,10 @@
                     $(this).css("backgroundColor", "orange");
                 }
             });
+            $('a').on('click', function(event) {
+                event.preventDefault();
+                alert('링크가 클릭되었습니다!');
+            });
         }          
     );
 
@@ -31,5 +35,6 @@
 </head>
 <body>
     <div id="box"></div>
+    <a href="https://www.naver.com">Naver Homepage</a>
 </body>
 </html>
