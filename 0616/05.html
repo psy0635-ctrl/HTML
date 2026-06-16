@@ -13,17 +13,18 @@
                 height: "100px",
                 backgroundColor: "orange"
               }
-            ).on("click", function() {
-                $(this).css("backgroundColor", "red");
-
-            }).on("mouseenter", function() {
-                $(this).css("backgroundColor", "blue");
-
-            }).on("mouseleave", function() {
-               $(this).css("backgroundColor", "orange");
+            ).on({
+                click: function() {
+                    $(this).css("backgroundColor", "red");
+                },
+                mouseenter: function() {
+                    $(this).css("backgroundColor", "blue");
+                },
+                mouseleave: function() {
+                    $(this).css("backgroundColor", "orange");
+                }
             });
-        }
-              
+        }          
     );
 
     </script>
