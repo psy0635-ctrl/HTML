@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <script>
+        window.onload = function(){
+            let count = 0;
+            let image = document.getElementById("image");
+            let frames = ["imges/0.png", "imges/1.png", "imges/2.png", "imges/3.png", 
+                          "imges/4.png", "imges/5.png", "imges/6.png", "imges/7.png", 
+                          "imges/8.png", "imges/9.png", "imges/10.png", "imges/11.png",
+                          "imges/12.png" ,"imges/13.png" ,"imges/14.png"];
+
+            setInterval(function(){
+                image.src = frames[count % frames.length];
+                count++;
+            }, 1000/20);
+        }
+    </script>
+</head>
+<body>
+    <img id = "image">
+</body>
+</html>
