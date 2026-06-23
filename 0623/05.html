@@ -15,7 +15,12 @@
                         color : "white",
                     });
                     $("body").append(hElement);
-                    
+
+                    hElement.dblclick(
+                        function(){
+                            $(this).remove();
+                        }
+                    )
                 }
             }
         
